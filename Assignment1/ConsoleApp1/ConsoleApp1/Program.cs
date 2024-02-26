@@ -19,8 +19,8 @@ namespace ConsoleApp1
             //pro.Arr();
             //pro.TenMarks();
             //pro.CopyArray();
-            pro.String();
-            //pro.StringEquals();
+            //pro.String();
+            pro.StringEquals();
             //pro.Arithmetic_Op(10, 20, out int add, out int sub, out int mul, out int div);
             //Console.WriteLine($"Sum is {add}, Product is {mul}, Subtraction is {sub} and division is {div}");
             //Console.Write(pro.BuildReverse("Avinash")); 
@@ -218,6 +218,14 @@ namespace ConsoleApp1
 
             }
             Console.WriteLine("Equals");
+            // using inbuild function String.equals();
+            Console.WriteLine("Using Inbuild function string.equal(s1,s2)");
+            //bool x = string.Equals(s1, s2);
+            bool x = s1.Equals(s2);  // it will return bool 
+            if (x)
+                Console.WriteLine("String were equals");
+            else
+                Console.WriteLine("String were not equals");
 
 
 
