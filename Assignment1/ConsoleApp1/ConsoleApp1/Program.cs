@@ -220,7 +220,7 @@ namespace ConsoleApp1
             Console.WriteLine("Equals");
             // using inbuild function String.equals();
             Console.WriteLine("Using Inbuild function string.equal(s1,s2)");
-            //bool x = string.Equals(s1, s2);
+            //bool x = string.Equals(s1, s2);  
             bool x = s1.Equals(s2);  // it will return bool 
             if (x)
                 Console.WriteLine("String were equals");
