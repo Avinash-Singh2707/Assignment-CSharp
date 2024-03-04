@@ -12,8 +12,8 @@ namespace ConsoleApp1
         {
             Program pro = new Program();
             //pro.FirstQuestion();
-            Console.WriteLine(pro.SecondQuestion());
-            //Console.WriteLine(pro.ThirdQuestion());
+            //Console.WriteLine(pro.SecondQuestion());
+            Console.WriteLine("The largest number is: "+pro.ThirdQuestion());
             Console.Read();
         }
         public void FirstQuestion()
@@ -60,20 +60,24 @@ namespace ConsoleApp1
             //    }
 
             //}
-            return s;
+            //return s;
 
         }
 
         public int ThirdQuestion()
         {
-            int[] arr = new int[3];
-            Console.WriteLine("Enter three number: ");
-            for(int i=0;i<3;i++)
-            {
-                arr[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            Array.Sort(arr);
-            return arr[arr.Length - 1];
+            int a, b, c;
+            Console.WriteLine("Enter the value of a b and c: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
+            c = Convert.ToInt32(Console.ReadLine());
+            if (a >=b && a >=c)
+                return a;
+            else if (b >= a && b >= c)
+                return b;
+            else
+                return c;
+
 
 
         }
