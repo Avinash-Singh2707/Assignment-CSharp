@@ -11,21 +11,23 @@ namespace ConsoleApp1
     {
         int ProductId;
         string ProductName;
-        double price;
+        int price;
 
-        public static void SortedListFunction()   //Use Respective Function -> Uses Sorted List
+        public static void SortedListFunction()   
         {
-            SortedList s1 = new SortedList();
-            s1.Add(100,"Apple");
-            s1.Add(90,"Grapes");
-            s1.Add(50,"PineApple");
-            s1.Add(25,"Apple");
-            s1.Add(70,"Grapes");
-            s1.Add(10,"PineApple");
-            s1.Add(23,"Apple");
-            s1.Add(94,"Grapes");
-            s1.Add(30,"PineApple");
-            s1.Add(60,"Banana");
+            SortedList s1 = new SortedList();  //Use Respective Function -> Uses Sorted List
+
+
+            s1.Add(100, "Apple");
+            s1.Add(90, "Grapes");
+            s1.Add(50, "PineApple");
+            s1.Add(25, "Apple");
+            s1.Add(70, "Grapes");
+            s1.Add(10, "PineApple");
+            s1.Add(23, "Apple");
+            s1.Add(94, "Grapes");
+            s1.Add(30, "PineApple");
+            s1.Add(60, "Banana");
             Console.WriteLine("------Sorted Based on their price-----");
             foreach (DictionaryEntry de in s1)
             {
