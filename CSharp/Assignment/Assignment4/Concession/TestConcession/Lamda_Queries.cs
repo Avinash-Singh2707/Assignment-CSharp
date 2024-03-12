@@ -11,7 +11,7 @@ namespace TestConcession
         //Print a list of whose square is greater then 20...
         public void Square()
         {
-            List<int> num = new List<int>();
+            List <int> num = new List<int>();
             Console.WriteLine("Enter the size of list: ");
             int size = int.Parse(Console.ReadLine());
             Console.WriteLine($"Enter a {size} numbers: ");
