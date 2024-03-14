@@ -23,7 +23,7 @@ namespace ConsoleApp2
     }
     class BookShelf
     {
-        Books[] bk = new Books[5];
+        Books[] bk = new Books[5];      // Array
 
         public Books this[int pos]          // Indexers of book object...
         {
@@ -41,7 +41,7 @@ namespace ConsoleApp2
                 string AName = Console.ReadLine();
                 bs[i] = new Books(Bname,AName);
             }
-            for(int i=0;i<5;i++)
+            for(int i=0;i<5;i++)   // Display...
             {
                 bs[i].Display();
             }
