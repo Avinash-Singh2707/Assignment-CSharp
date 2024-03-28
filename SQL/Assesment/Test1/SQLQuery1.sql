@@ -37,6 +37,17 @@ select title,author,reviwer_name from books b, reviews r  where b.id=r.id
 
 select reviwer_name from reviews group by reviwer_name having count(reviwer_name)>1   
 
+--SELECT
+--reviwer_name
+--FROM
+--Reviews
+--GROUP
+--BY
+--reviwer_name
+--HAVING
+--count(
+--DISTINCT
+--book_id) > 1;
 
 create table customer(
 id int identity,
