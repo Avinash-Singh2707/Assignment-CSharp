@@ -41,6 +41,9 @@ delete from tblEmployee where empno=1
 rollback tran t1        
 commit
 
+----After completing above all actions how to recall the deleted row without losing increment of second row.
+-- we can rollback save tran t1 without 
+
 
 ----After completing above all actions how to recall the deleted row without losing increment of second row.
 --In this we have also create temporary table to store the deleted row...
