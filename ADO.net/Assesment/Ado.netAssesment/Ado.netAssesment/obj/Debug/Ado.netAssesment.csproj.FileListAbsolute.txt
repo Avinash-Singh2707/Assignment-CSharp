@@ -1,0 +1,7 @@
+D:\CSharp Training\ADO.net\Assesment\Ado.netAssesment\Ado.netAssesment\bin\Debug\Ado.netAssesment.exe.config
+D:\CSharp Training\ADO.net\Assesment\Ado.netAssesment\Ado.netAssesment\bin\Debug\Ado.netAssesment.exe
+D:\CSharp Training\ADO.net\Assesment\Ado.netAssesment\Ado.netAssesment\bin\Debug\Ado.netAssesment.pdb
+D:\CSharp Training\ADO.net\Assesment\Ado.netAssesment\Ado.netAssesment\obj\Debug\Ado.netAssesment.csproj.AssemblyReference.cache
+D:\CSharp Training\ADO.net\Assesment\Ado.netAssesment\Ado.netAssesment\obj\Debug\Ado.netAssesment.csproj.CoreCompileInputs.cache
+D:\CSharp Training\ADO.net\Assesment\Ado.netAssesment\Ado.netAssesment\obj\Debug\Ado.netAssesment.exe
+D:\CSharp Training\ADO.net\Assesment\Ado.netAssesment\Ado.netAssesment\obj\Debug\Ado.netAssesment.pdb
