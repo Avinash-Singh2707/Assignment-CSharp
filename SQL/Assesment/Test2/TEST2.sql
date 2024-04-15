@@ -27,7 +27,7 @@ empno int,
 ename varchar(10),
 sal int,
 doj date)
-
+drop table tblEmployee
 -- 4(a)-> inserting values
 
 insert into tblEmployee values(1,'Avinash',100,'2000-01-12'),(2,'Arjun',200,'2000-01-19'),(3,'Avi',300,'2000-01-8')
@@ -37,9 +37,11 @@ update tblEmployee set sal=sal*1.15 where empno=2
 save tran t1
 --4(c) Delete first row.
 
-delete from tblEmployee where empno=1
-rollback tran t1        
+--delete from tblEmployee where empno=1
+rollback tran t1
+select * from tblEmployee where empno=1
 commit
+
 
 ----After completing above all actions how to recall the deleted row without losing increment of second row.
 -- we can rollback save tran t1 without 
@@ -73,27 +75,61 @@ select * from #DeletedRow
 --	c      For Others employees 5%of sal as bonus
 select * from EMP
 -- creating function -> CalculateBonus..
-create or alter function CalculateBonus(@deptno int,@sal int)
+--create or alter function CalculateBonus(@deptno int,@sal int)
+--returns int
+--as 
+--begin
+--	declare @bonus int 
+--	--declare @salary int
+--	if @deptno = 10
+--		--declare @salary int = (select sal from EMP where deptno=10)
+--        set @bonus = @sal * 0.15
+--    else if @deptno = 20
+--        set @bonus = @sal * 0.20
+--    else
+--        set @bonus = @sal * 0.05
+
+--    return @bonus
+--end
+---- calling the function
+--declare @Sal int = 850
+--declare @Deptno INT = 20
+
+--select @Sal AS salary,@Deptno AS DepartmentNO, dbo.CalculateBonus(@Deptno, @Sal) as Bonus
+
+-------------------------------
+
+create or alter function CalculateBonus1(@deptno int,@sal int)
 returns int
 as 
 begin
 	declare @bonus int 
-	--declare @salary int
+	declare @salary int
 	if @deptno = 10
-		--declare @salary int = (select sal from EMP where deptno=10)
-        set @bonus = @sal * 0.15
+		begin
+		set @salary = (select sal from EMP where deptno=10)
+        set @bonus = @salary * 0.15
+		end
     else if @deptno = 20
-        set @bonus = @sal * 0.20
+		begin
+		set @salary  = (select sal from EMP where deptno=20)
+        set @bonus = @salary * 0.20
+		end
     else
-        set @bonus = @sal * 0.05
+		begin
+		set @salary = (select sal from EMP)
+        set @bonus = @salary * 0.05
+		end
 
     return @bonus
 end
--- calling the function
-declare @Sal int = 850
-declare @Deptno INT = 20
 
-select @Sal AS salary,@Deptno AS DepartmentNO, dbo.CalculateBonus(@Deptno, @Sal) as Bonus
+select * from EMP
+-- calling the above function
+--select  dbo.CalculateBonus(10) as Bonus
+select @Sal AS salary,@Deptno AS DepartmentNO, dbo.CalculateBonus(@Deptno) as Bonus
+
+
 
 
 
